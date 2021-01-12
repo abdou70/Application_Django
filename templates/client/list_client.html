@@ -28,7 +28,7 @@
 		<div class="card card-body">
 			<h5>Total des Commandes</h5>
 			<hr>
-			<h1 style="text-align: center;padding: 10px"></h1>
+			<h1 style="text-align: center;padding: 10px">{{commande_total}}</h1>
 		</div>
 	</div>
 </div>
@@ -54,7 +54,6 @@
 			<table class="table table-sm">
 				<tr>
 					<th>Produit</th>
-					<th>Categorie</th>
 					<th>Date de Commande</th>
 					<th>Status</th>
 					<th>Mise à Jour</th>
@@ -64,11 +63,10 @@
 				     {% for commande in commande %}
 				<tr>
 					<th>{{ commande.produit }}</th>
-					<th>{{ commande.produit }}</th>
 					<th>{{ commande.date_creation }}</th>
 					<th>{{ commande.status }}</th>
-					<th>Mise à Jour</th>
-					<th>Supprimer</th>
+					<th><a href="#">Mise à Jour</a></th>
+					<th><a href="#">Supprimer</a></th>
 				</tr>
                     {% endfor %}
 			</table>
