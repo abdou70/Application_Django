@@ -5,4 +5,6 @@
 from django.shortcuts import render
 
 def list_commande(request):
+    commandes=Commande.objects.all()
+    context={'commandes':commandes}
     return render(request,'commande/commande.html')

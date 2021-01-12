@@ -4,5 +4,5 @@ from . import views
 # from django.contrib import admin
 
 urlpatterns = [
-    url(r'^commande/$', views.list_commande),
+    url(r'^commande/', views.list_commande),
 ]
