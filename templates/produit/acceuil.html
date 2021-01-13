@@ -32,7 +32,7 @@
 		<h5>Les Comamndes</h5>
 		<hr>
 		<div class="card card-body">
-			<a class="btn btn-primary  btn-sm btn-block" href="">Ajouter une Commande</a>
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'ajouter' %}">Ajouter une Commande</a>
 			<table class="table table-sm">
 				<tr>
 					<th>Produit</th>
@@ -49,7 +49,7 @@
 					<th>{{ commande.client }}</th>
 					<th>{{ commande.date_creation }}</th>
 					<th>{{ commande.status }}</th>
-					<th><a class="btn btn-sm btn-info" href="#">Details</a></th>
+					<th><a class="btn btn-sm btn-info" href="{% url 'modifier' commande.id %}">Modifier</a></th>
 					<th><a class="btn btn-sm btn-danger" href="#">Supprimer</a></th>
 				</tr>
 				{% endfor %}

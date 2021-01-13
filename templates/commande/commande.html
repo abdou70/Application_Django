@@ -2,5 +2,15 @@
 
 
 {% block content %}
-<h1> Mes Commandes </h1>
+<div class="row">
+    <div class="col-md-l">
+        <div class="card card-body">
+            <form action="" method="POST">
+                {% csrf_token%}
+                {{ form }}
+              <input type="submit" name="envoyer">
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

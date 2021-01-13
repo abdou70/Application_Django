@@ -5,4 +5,6 @@ from . import views
 
 urlpatterns = [
     url(r'^commande/', views.list_commande),
+    url(r'^ajouter/',views.ajouter_commande,name='ajouter'),
+    url(r'^modifier/(?P<pk>[0-9]+)$',views.modifier_commande,name='modifier')
 ]
