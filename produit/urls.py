@@ -3,5 +3,5 @@ from . import views
 # from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', views.home),
+    url(r'^$', views.home,name='acceuil'),
 ]

@@ -50,7 +50,7 @@
 					<th>{{ commande.date_creation }}</th>
 					<th>{{ commande.status }}</th>
 					<th><a class="btn btn-sm btn-info" href="{% url 'modifier' commande.id %}">Modifier</a></th>
-					<th><a class="btn btn-sm btn-danger" href="#">Supprimer</a></th>
+					<th><a class="btn btn-sm btn-danger" href="{% url 'supprimer' commande.id %}">Supprimer</a></th>
 				</tr>
 				{% endfor %}
 

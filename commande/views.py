@@ -30,5 +30,14 @@ def modifier_commande(request,pk):
             form.save()
             return redirect('/')
     context={'form':form}        
-    return render(request,'commande/commande.html',context)    
+    return render(request,'commande/commande.html',context)   
+
+
+def supprimer_commande(request,pk):
+    commande=Commande.objects.get(id=pk)
+    if request.method=='POST':
+        commande.delete()
+        return redirect('/')
+    context={'item':commande}    
+    return render(request,'commande/supprimercom.html',context) 
   
