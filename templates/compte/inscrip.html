@@ -1,1 +1,16 @@
+{%  extends 'main.html' %}
+
+{% block content %}
 <h1>Inscription Dans la plate_forme</h1>
+
+<form method='POST' action=''>
+
+    {% for champs in form %}
+       {{ champs.label }}
+       {{ champs}}
+    {% endfor %}
+
+<br/><input type="submit" name="Inscription" class="btn btn-primary">
+
+</form>
+{% endblock %}
