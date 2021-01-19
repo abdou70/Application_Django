@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     url(r'^inscrip/$', views.inscription,name='inscrip'),
     url(r'^access/$', views.accespage,name='access'),
+    url(r'^quitter/$', views.logout,name='quitter'),
 ]

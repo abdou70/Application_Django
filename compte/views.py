@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from .forms import CreerUtilisateur
 from django.contrib import messages
 
@@ -35,6 +35,10 @@ def accespage(request):
         else:
             messages.info(request,"Verifier votre nom d'utilisateur ou votre mots de passe")    
     return render(request,'compte/access.html',context)
+
+def logout(request):
+    
+    return redirect('access')
 
 
 
