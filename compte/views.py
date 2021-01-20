@@ -37,7 +37,6 @@ def accespage(request):
     return render(request,'compte/access.html',context)
 
 def logout(request):
-    
     return redirect('access')
 
 
